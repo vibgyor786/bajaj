@@ -18,6 +18,11 @@ function isCharLetter(char) {
   }
 // parse application/json
 app.use(bodyParser.json())
+app.get('/', (req, res) => {
+res.status(200).send({
+    working:1
+   })
+});
 app.get('/bfhl', (req, res) => {
 res.status(200).send({
     operation_code:1
